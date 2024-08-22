@@ -11,10 +11,10 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY . .
 
 # Set environment variables
-ENV PROJECT_ID="account-pocs"
-ENV LOCATION="global"
-ENV DATASTORE_ID="starhub-faq-ds-search_1723603291738"
-ENV AGENT_APPLICATION_ID="starhub-faq-app_1723603258721"
+ENV PROJECT_ID=""
+ENV LOCATION=""
+ENV DATASTORE_ID=""
+ENV AGENT_APPLICATION_ID=""
 
 # Expose the application port
 EXPOSE 8000
