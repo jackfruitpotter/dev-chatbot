@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "asia-southeast1-docker.pkg.dev/$PROJECT_ID/starhub-faq-search/faq-api",
+        "asia-southeast1-docker.pkg.dev/$PROJECT_ID/dev-starhub-faq-search/faq-api",
         ".",
       ]
 
@@ -14,7 +14,7 @@ steps:
     args:
       [
         "push",
-        "asia-southeast1-docker.pkg.dev/$PROJECT_ID/starhub-faq-search/faq-api",
+        "asia-southeast1-docker.pkg.dev/$PROJECT_ID/dev-starhub-faq-search/faq-api",
       ]
 
   # Deploy to Cloud Run
@@ -23,9 +23,9 @@ steps:
     args:
       - "run"
       - "deploy"
-      - "starhub-faq-search" # Service name
+      - "dev-starhub-faq-search" # Service name
       - "--image"
-      - "asia-southeast1-docker.pkg.dev/$PROJECT_ID/starhub-faq-search/faq-api"
+      - "asia-southeast1-docker.pkg.dev/$PROJECT_ID/dev-starhub-faq-search/faq-api"
       - "--region"
       - "asia-southeast1"
       - "--platform"
@@ -33,5 +33,5 @@ steps:
       - "--allow-unauthenticated"
 # # Optionally, set substitutions for flexibility
 # substitutions:
-#   _SERVICE_NAME: "starhub-faq-search"
+#   _SERVICE_NAME: "dev-starhub-faq-search"
 #   _REGION: "asia-southeast1"
